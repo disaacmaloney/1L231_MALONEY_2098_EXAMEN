@@ -49,4 +49,20 @@
         wins.ControlBox = False
         wins.Show()
     End Sub
+
+    Private Sub MantenimientoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem2.Click
+        Dim wins As New _40_FACULTY
+        wins.MdiParent = Me
+        wins.WindowState = FormWindowState.Maximized
+        wins.ControlBox = False
+        wins.Show()
+    End Sub
+
+    Private Sub ListarToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem2.Click
+        Dim wins As New _41_FACULTY_LIST
+        wins.MdiParent = Me
+        wins.WindowState = FormWindowState.Maximized
+        wins.ControlBox = False
+        wins.Show()
+    End Sub
 End Class

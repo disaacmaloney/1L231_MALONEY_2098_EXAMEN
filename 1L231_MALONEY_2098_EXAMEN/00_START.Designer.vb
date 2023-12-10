@@ -31,12 +31,18 @@ Partial Class Form1
         ProfesorToolStripMenuItem = New ToolStripMenuItem()
         MantenimientoToolStripMenuItem1 = New ToolStripMenuItem()
         ListarToolStripMenuItem1 = New ToolStripMenuItem()
+        FacultadToolStripMenuItem = New ToolStripMenuItem()
+        MantenimientoToolStripMenuItem2 = New ToolStripMenuItem()
+        ListarToolStripMenuItem2 = New ToolStripMenuItem()
+        CarreraToolStripMenuItem = New ToolStripMenuItem()
+        MantenimientoToolStripMenuItem3 = New ToolStripMenuItem()
+        ListarToolStripMenuItem3 = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {InicioToolStripMenuItem, EstudianteToolStripMenuItem, ProfesorToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {InicioToolStripMenuItem, EstudianteToolStripMenuItem, ProfesorToolStripMenuItem, FacultadToolStripMenuItem, CarreraToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(800, 24)
@@ -85,14 +91,52 @@ Partial Class Form1
         ' MantenimientoToolStripMenuItem1
         ' 
         MantenimientoToolStripMenuItem1.Name = "MantenimientoToolStripMenuItem1"
-        MantenimientoToolStripMenuItem1.Size = New Size(180, 22)
+        MantenimientoToolStripMenuItem1.Size = New Size(156, 22)
         MantenimientoToolStripMenuItem1.Text = "Mantenimiento"
         ' 
         ' ListarToolStripMenuItem1
         ' 
         ListarToolStripMenuItem1.Name = "ListarToolStripMenuItem1"
-        ListarToolStripMenuItem1.Size = New Size(180, 22)
+        ListarToolStripMenuItem1.Size = New Size(156, 22)
         ListarToolStripMenuItem1.Text = "Listar"
+        ' 
+        ' FacultadToolStripMenuItem
+        ' 
+        FacultadToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {MantenimientoToolStripMenuItem2, ListarToolStripMenuItem2})
+        FacultadToolStripMenuItem.Name = "FacultadToolStripMenuItem"
+        FacultadToolStripMenuItem.Size = New Size(64, 20)
+        FacultadToolStripMenuItem.Text = "Facultad"
+        ' 
+        ' MantenimientoToolStripMenuItem2
+        ' 
+        MantenimientoToolStripMenuItem2.Name = "MantenimientoToolStripMenuItem2"
+        MantenimientoToolStripMenuItem2.Size = New Size(180, 22)
+        MantenimientoToolStripMenuItem2.Text = "Mantenimiento"
+        ' 
+        ' ListarToolStripMenuItem2
+        ' 
+        ListarToolStripMenuItem2.Name = "ListarToolStripMenuItem2"
+        ListarToolStripMenuItem2.Size = New Size(180, 22)
+        ListarToolStripMenuItem2.Text = "Listar"
+        ' 
+        ' CarreraToolStripMenuItem
+        ' 
+        CarreraToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {MantenimientoToolStripMenuItem3, ListarToolStripMenuItem3})
+        CarreraToolStripMenuItem.Name = "CarreraToolStripMenuItem"
+        CarreraToolStripMenuItem.Size = New Size(57, 20)
+        CarreraToolStripMenuItem.Text = "Carrera"
+        ' 
+        ' MantenimientoToolStripMenuItem3
+        ' 
+        MantenimientoToolStripMenuItem3.Name = "MantenimientoToolStripMenuItem3"
+        MantenimientoToolStripMenuItem3.Size = New Size(156, 22)
+        MantenimientoToolStripMenuItem3.Text = "Mantenimiento"
+        ' 
+        ' ListarToolStripMenuItem3
+        ' 
+        ListarToolStripMenuItem3.Name = "ListarToolStripMenuItem3"
+        ListarToolStripMenuItem3.Size = New Size(156, 22)
+        ListarToolStripMenuItem3.Text = "Listar"
         ' 
         ' Form1
         ' 
@@ -119,4 +163,10 @@ Partial Class Form1
     Friend WithEvents ProfesorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MantenimientoToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ListarToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FacultadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MantenimientoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ListarToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents CarreraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MantenimientoToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ListarToolStripMenuItem3 As ToolStripMenuItem
 End Class

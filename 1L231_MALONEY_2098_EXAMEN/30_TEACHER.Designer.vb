@@ -46,6 +46,10 @@ Partial Class _30_TEACHER
         ddl_state = New ComboBox()
         Label8 = New Label()
         txt_address = New TextBox()
+        ddl_district = New ComboBox()
+        Label9 = New Label()
+        Label10 = New Label()
+        Label11 = New Label()
         SuspendLayout()
         ' 
         ' lblt_title_01
@@ -133,9 +137,9 @@ Partial Class _30_TEACHER
         ' ddl_province
         ' 
         ddl_province.FormattingEnabled = True
-        ddl_province.Location = New Point(411, 310)
+        ddl_province.Location = New Point(394, 268)
         ddl_province.Name = "ddl_province"
-        ddl_province.Size = New Size(121, 23)
+        ddl_province.Size = New Size(150, 23)
         ddl_province.TabIndex = 9
         ' 
         ' Label2
@@ -188,7 +192,7 @@ Partial Class _30_TEACHER
         ' 
         ' txt_ident
         ' 
-        txt_ident.Location = New Point(638, 172)
+        txt_ident.Location = New Point(667, 172)
         txt_ident.Name = "txt_ident"
         txt_ident.Size = New Size(150, 23)
         txt_ident.TabIndex = 19
@@ -196,11 +200,11 @@ Partial Class _30_TEACHER
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(573, 180)
+        Label5.Location = New Point(565, 180)
         Label5.Name = "Label5"
-        Label5.Size = New Size(63, 15)
+        Label5.Size = New Size(96, 15)
         Label5.TabIndex = 18
-        Label5.Text = "APELLIDO:"
+        Label5.Text = "IDENTIFICACIÓN"
         ' 
         ' txt_phone
         ' 
@@ -212,11 +216,12 @@ Partial Class _30_TEACHER
         ' Label6
         ' 
         Label6.AutoSize = True
+        Label6.FlatStyle = FlatStyle.System
         Label6.Location = New Point(82, 222)
         Label6.Name = "Label6"
-        Label6.Size = New Size(63, 15)
+        Label6.Size = New Size(70, 15)
         Label6.TabIndex = 20
-        Label6.Text = "APELLIDO:"
+        Label6.Text = "TELÉFONO: "
         ' 
         ' txt_salary
         ' 
@@ -237,7 +242,7 @@ Partial Class _30_TEACHER
         ' ddl_state
         ' 
         ddl_state.FormattingEnabled = True
-        ddl_state.Location = New Point(638, 214)
+        ddl_state.Location = New Point(667, 214)
         ddl_state.Name = "ddl_state"
         ddl_state.Size = New Size(150, 23)
         ddl_state.TabIndex = 24
@@ -245,7 +250,7 @@ Partial Class _30_TEACHER
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(583, 220)
+        Label8.Location = New Point(612, 220)
         Label8.Name = "Label8"
         Label8.Size = New Size(52, 15)
         Label8.TabIndex = 25
@@ -253,16 +258,55 @@ Partial Class _30_TEACHER
         ' 
         ' txt_address
         ' 
-        txt_address.Location = New Point(638, 271)
+        txt_address.Location = New Point(147, 312)
         txt_address.Name = "txt_address"
         txt_address.Size = New Size(150, 23)
         txt_address.TabIndex = 26
+        ' 
+        ' ddl_district
+        ' 
+        ddl_district.FormattingEnabled = True
+        ddl_district.Location = New Point(667, 268)
+        ddl_district.Name = "ddl_district"
+        ddl_district.Size = New Size(150, 23)
+        ddl_district.TabIndex = 27
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(317, 276)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(71, 15)
+        Label9.TabIndex = 28
+        Label9.Text = "PROVINCIA:"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Location = New Point(604, 276)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(57, 15)
+        Label10.TabIndex = 29
+        Label10.Text = "DISTRITO:"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(73, 320)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(71, 15)
+        Label11.TabIndex = 30
+        Label11.Text = "DIRECCIÓN:"
         ' 
         ' _30_TEACHER
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(855, 450)
+        Controls.Add(Label11)
+        Controls.Add(Label10)
+        Controls.Add(Label9)
+        Controls.Add(ddl_district)
         Controls.Add(txt_address)
         Controls.Add(Label8)
         Controls.Add(ddl_state)
@@ -317,4 +361,8 @@ Partial Class _30_TEACHER
     Friend WithEvents ddl_state As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txt_address As TextBox
+    Friend WithEvents ddl_district As ComboBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
 End Class

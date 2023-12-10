@@ -103,24 +103,32 @@
         End Set
     End Property
 
-    Public Function getUser() As DataTable
-
-        Dim dtUser As DataTable
-        dtUser = New DataTable()
-        dtUser = var_db.getList("SP_USER_GET")
-        Return dtUser
-
-    End Function
-
     Public Function getUserByCod(codTeacher As String, typeUser As String) As DataTable
 
         Dim dtUser As DataTable
         dtUser = New DataTable()
-        dtUser = var_db.getUserByCod("SP_USERS_GET_BY_ID", codTeacher, typeUser)
-        Return dtUser
+        Return var_db.getUserByCod("SP_USERS_GET_BY_ID", codTeacher, typeUser)
 
     End Function
 
+    Public Function getUser(typeUser As String) As DataTable
 
+        Dim dtUser As DataTable
+        dtUser = New DataTable()
+        Return var_db.getUser(typeUser)
+
+    End Function
+
+    Public Function postUserNew(COD_USER As String, USE_NAME As String, USE_LASTNAME As String, USE_EMAIL As String, USE_PHONE As String, USE_ADDRESS As String, USE_SALARIE As String, ID_DITRICT As String, ID_STATE As String, TYPE_USER As String, ID_PROVINCE As String, USE_IDENT As String)
+        Return var_db.postUserNew(COD_USER, USE_NAME, USE_LASTNAME, USE_EMAIL, USE_PHONE, USE_ADDRESS, USE_SALARIE, ID_DITRICT, ID_STATE, TYPE_USER, ID_PROVINCE, USE_IDENT)
+    End Function
+
+    Public Function deleteUser(COD_USER As String)
+        Return var_db.deleteUser(COD_USER)
+    End Function
+
+    Public Function upddateUser(COD_USER As String, USE_NAME As String, USE_LASTNAME As String, USE_EMAIL As String, USE_PHONE As String, USE_ADDRESS As String, USE_SALARIE As String, ID_DITRICT As String, ID_STATE As String, ID_PROVINCE As String, USE_IDENT As String)
+        Return var_db.upddateUser(COD_USER, USE_NAME, USE_LASTNAME, USE_EMAIL, USE_PHONE, USE_ADDRESS, USE_SALARIE, ID_DITRICT, ID_STATE, ID_PROVINCE, USE_IDENT)
+    End Function
 
 End Class
