@@ -39,8 +39,18 @@
         list_user.Columns("STA_NAME").DisplayIndex = 10
         list_user.Columns("STA_NAME").HeaderText = "Estado"
 
+        list_user.Columns("FAC_NAME").DisplayIndex = 11
+        list_user.Columns("FAC_NAME").HeaderText = "Facultad"
+
+        list_user.Columns("CAR_NAME").DisplayIndex = 12
+        list_user.Columns("CAR_NAME").HeaderText = "Carrera"
+
         list_user.Columns("ID_DITRICT").Visible = False
         list_user.Columns("ID_PROVINCE").Visible = False
+        list_user.Columns("ID_FACULTAD").Visible = False
+        list_user.Columns("FAC_NAME").Visible = False
+        list_user.Columns("ID_CAREER").Visible = False
+        list_user.Columns("CAR_NAME").Visible = False
 
         list_user.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 

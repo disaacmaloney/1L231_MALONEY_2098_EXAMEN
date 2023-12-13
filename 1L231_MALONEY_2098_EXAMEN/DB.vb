@@ -107,7 +107,7 @@ Public Class DB
 
     End Function
 
-    Public Function postUserNew(cod As String, name As String, lastname As String, email As String, phone As String, address As String, salary As String, district As String, state As String, typeUser As String, province As String, ident As String) As Boolean
+    Public Function postUserNew(cod As String, name As String, lastname As String, email As String, phone As String, address As String, salary As String, district As String, state As String, typeUser As String, province As String, ident As String, ID_FACULTAD As String, ID_CARRERA As String, USE_INDICE As String) As Boolean
 
         Try
             abrir()
@@ -125,6 +125,9 @@ Public Class DB
             command.Parameters.AddWithValue("@TYPE_USER", typeUser)
             command.Parameters.AddWithValue("@ID_PROVINCE", province)
             command.Parameters.AddWithValue("@USE_IDENT", ident)
+            command.Parameters.AddWithValue("@ID_FACULTAD", ID_FACULTAD)
+            command.Parameters.AddWithValue("@ID_CARRERA", ID_CARRERA)
+            command.Parameters.AddWithValue("@USE_INDICE", USE_INDICE)
 
             command.CommandType = CommandType.StoredProcedure
 
@@ -154,7 +157,7 @@ Public Class DB
         End Try
     End Function
 
-    Public Function upddateUser(COD_USER As String, USE_NAME As String, USE_LASTNAME As String, USE_EMAIL As String, USE_PHONE As String, USE_ADDRESS As String, USE_SALARIE As String, ID_DITRICT As String, ID_STATE As String, ID_PROVINCE As String, USE_IDENT As String)
+    Public Function upddateUser(COD_USER As String, USE_NAME As String, USE_LASTNAME As String, USE_EMAIL As String, USE_PHONE As String, USE_ADDRESS As String, USE_SALARIE As String, ID_DITRICT As String, ID_STATE As String, ID_PROVINCE As String, USE_IDENT As String, TYPE_USER As String, ID_FACULTAD As String, ID_CARRERA As String, USE_INDICE As String)
         Try
             abrir()
             command = New SqlCommand("SP_USERS_UPDATE", connection)
@@ -170,6 +173,10 @@ Public Class DB
             command.Parameters.AddWithValue("@ID_STATE", ID_STATE)
             command.Parameters.AddWithValue("@ID_PROVINCE", ID_PROVINCE)
             command.Parameters.AddWithValue("@USE_IDENT", USE_IDENT)
+            command.Parameters.AddWithValue("@TYPE_USER", TYPE_USER)
+            command.Parameters.AddWithValue("@ID_FACULTAD", ID_FACULTAD)
+            command.Parameters.AddWithValue("@ID_CARRERA", ID_CARRERA)
+            command.Parameters.AddWithValue("@USE_INDICE", USE_INDICE)
 
             command.CommandType = CommandType.StoredProcedure
 
@@ -229,6 +236,68 @@ Public Class DB
 
             command.Parameters.AddWithValue("@FAC_NAME", FAC_NAME)
             command.Parameters.AddWithValue("@FAC_CODIGO", FAC_CODIGO)
+
+            command.CommandType = CommandType.StoredProcedure
+
+            command.ExecuteNonQuery()
+            cerrar()
+            Return True
+        Catch ex As Exception
+            MsgBox("excuteReader " + ex.ToString())
+            Return False
+        End Try
+
+    End Function
+
+    Public Function getCareer(ID_FACULTY As String) As DataTable
+        Dim dt As New DataTable()
+
+        Try
+            abrir()
+            command = New SqlCommand("SP_CAREER_GET", connection)
+            command.Parameters.AddWithValue("@ID_FACULTY", ID_FACULTY)
+
+            command.CommandType = CommandType.StoredProcedure
+
+            sqlAdapter = New SqlDataAdapter(command)
+            sqlAdapter.Fill(dt)
+            cerrar()
+        Catch ex As Exception
+            MsgBox("excuteReader " + ex.ToString())
+        End Try
+        Return dt
+
+    End Function
+
+    Public Function getCareerById(ID_CAREER As String) As DataTable
+        Dim dt As New DataTable()
+
+        Try
+            abrir()
+            command = New SqlCommand("SP_CAREER_GET_BY_ID", connection)
+
+            command.Parameters.AddWithValue("@ID_CAREER", ID_CAREER)
+            command.CommandType = CommandType.StoredProcedure
+
+            sqlAdapter = New SqlDataAdapter(command)
+            sqlAdapter.Fill(dt)
+            cerrar()
+        Catch ex As Exception
+            MsgBox("excuteReader " + ex.ToString())
+        End Try
+        Return dt
+
+    End Function
+
+    Public Function postCareerNew(CAR_NAME As String, CAR_CODIGO As String, ID_FACULTY As String) As Boolean
+
+        Try
+            abrir()
+            command = New SqlCommand("SP_CAREER_NEW", connection)
+
+            command.Parameters.AddWithValue("@CAR_NAME", CAR_NAME)
+            command.Parameters.AddWithValue("@CAR_CODIGO", CAR_CODIGO)
+            command.Parameters.AddWithValue("@ID_FACULTY", ID_FACULTY)
 
             command.CommandType = CommandType.StoredProcedure
 

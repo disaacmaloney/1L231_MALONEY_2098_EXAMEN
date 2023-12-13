@@ -37,6 +37,9 @@
 
         list_user.Columns("ID_DITRICT").Visible = False
         list_user.Columns("ID_PROVINCE").Visible = False
+        list_user.Columns("USE_SALARIE").Visible = False
+        list_user.Columns("ID_FACULTAD").Visible = False
+        list_user.Columns("ID_CAREER").Visible = False
 
         list_user.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
 

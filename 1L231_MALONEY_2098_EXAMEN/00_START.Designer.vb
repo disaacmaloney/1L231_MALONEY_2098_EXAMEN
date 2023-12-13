@@ -129,13 +129,13 @@ Partial Class Form1
         ' MantenimientoToolStripMenuItem3
         ' 
         MantenimientoToolStripMenuItem3.Name = "MantenimientoToolStripMenuItem3"
-        MantenimientoToolStripMenuItem3.Size = New Size(156, 22)
+        MantenimientoToolStripMenuItem3.Size = New Size(180, 22)
         MantenimientoToolStripMenuItem3.Text = "Mantenimiento"
         ' 
         ' ListarToolStripMenuItem3
         ' 
         ListarToolStripMenuItem3.Name = "ListarToolStripMenuItem3"
-        ListarToolStripMenuItem3.Size = New Size(156, 22)
+        ListarToolStripMenuItem3.Size = New Size(180, 22)
         ListarToolStripMenuItem3.Text = "Listar"
         ' 
         ' Form1

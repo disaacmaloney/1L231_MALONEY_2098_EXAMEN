@@ -38,7 +38,6 @@ Public Class _30_TEACHER
         If (lstUser.Rows.Count > 0) Then
             txt_search.Enabled = False
             btn_search.Enabled = False
-            'txt_cod.Text = lstUser.Rows(0)("COD_TEACHER").ToString()
             txt_name.Text = lstUser.Rows(0)("USE_NAME").ToString()
             txt_lastname.Text = lstUser.Rows(0)("USE_LASTNAME").ToString()
             txt_ident.Text = lstUser.Rows(0)("USE_IDENT").ToString()
@@ -142,7 +141,7 @@ Public Class _30_TEACHER
     End Sub
 
     Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
-        var_user.postUserNew(txt_search.Text, txt_name.Text, txt_lastname.Text, txt_email.Text, txt_phone.Text, txt_address.Text, txt_salary.Text, ddl_district.SelectedValue.ToString(), ddl_state.SelectedIndex.ToString(), "Profesor", ddl_province.SelectedValue.ToString(), txt_ident.Text)
+        var_user.postUserNew(txt_search.Text, txt_name.Text, txt_lastname.Text, txt_email.Text, txt_phone.Text, txt_address.Text, txt_salary.Text, ddl_district.SelectedValue.ToString(), ddl_state.SelectedIndex.ToString(), "Profesor", ddl_province.SelectedValue.ToString(), txt_ident.Text, 0, 0, 0)
         clear()
     End Sub
 
@@ -164,7 +163,7 @@ Public Class _30_TEACHER
     End Sub
 
     Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
-        var_user.upddateUser(txt_search.Text, txt_name.Text, txt_lastname.Text, txt_email.Text, txt_phone.Text, txt_address.Text, txt_salary.Text, ddl_district.SelectedValue.ToString(), ddl_state.SelectedIndex.ToString(), ddl_province.SelectedValue.ToString(), txt_ident.Text)
+        var_user.upddateUser(txt_search.Text, txt_name.Text, txt_lastname.Text, txt_email.Text, txt_phone.Text, txt_address.Text, txt_salary.Text, ddl_district.SelectedValue.ToString(), ddl_state.SelectedIndex.ToString(), ddl_province.SelectedValue.ToString(), txt_ident.Text, "Profesor", 0, 0, 0)
         clear()
     End Sub
 End Class

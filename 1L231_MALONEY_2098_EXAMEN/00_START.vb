@@ -65,4 +65,12 @@
         wins.ControlBox = False
         wins.Show()
     End Sub
+
+    Private Sub MantenimientoToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem3.Click
+        Dim wins As New _50_CAREER
+        wins.MdiParent = Me
+        wins.WindowState = FormWindowState.Maximized
+        wins.ControlBox = False
+        wins.Show()
+    End Sub
 End Class
